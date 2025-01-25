@@ -3,5 +3,6 @@ return {
   cmd = 'ShowkeysToggle',
   opts = {
     position = 'bottom-center',
+    maxkeys = 5,
   },
 }

@@ -36,6 +36,16 @@ require('lazy').setup {
       vim.keymap.set('n', '<Leader>o', ':NeoTreeFocusToggle<CR>', { desc = 'Toggle NeoTree' })
     end,
   },
+  {
+    -- Add a custom keybinding to toggle the colorscheme
+    -- vim.api.nvim_create_autocmd('User', {
+    --   pattern = 'CyberdreamToggleMode',
+    --   callback = function(event)
+    --     print('Switched to ' .. event.data .. ' mode!')
+    --   end,
+    -- }),
+    vim.api.nvim_set_keymap('n', '<leader>tt', ':CyberdreamToggleMode<CR>', { noremap = true, silent = true }),
+  },
   require 'plugins.cyberdream',
   require 'plugins.neotree',
   require 'plugins.bufferline',
